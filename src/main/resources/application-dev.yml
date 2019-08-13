@@ -1,0 +1,24 @@
+server:
+  port: 8080
+#一般测试环境是8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&useJDBCCompliantTimezoneShift=true&serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: org.lanqiao.jd.entity
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+
+
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
