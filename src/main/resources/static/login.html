@@ -23,11 +23,26 @@
             });
 
             //提交表单
-            // $("#loginsubmit").click(function () {
-            //     $.ajax({
-            //
-            //     })
-            // })
+            $("#loginsubmit").click(function () {
+                var input1 = $("#loginname").val();
+                var input2 = $("#nloginpwd").val();
+
+                $.ajax({
+                    url:"/login",
+                    type:"post",
+                    data:{
+                        'userName':input1,
+                        'userPassword':input2
+                    },
+                    datatype:"json",
+                    success:function (data) {
+                        alert("成功");
+                    },
+                    error:function () {
+                        alert("出错");
+                    }
+                })
+            })
 
         })
     </script>
