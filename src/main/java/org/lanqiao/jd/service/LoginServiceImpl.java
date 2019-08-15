@@ -11,7 +11,7 @@ public class LoginServiceImpl implements LoginService{
 
     @Override
     public String selectByLogin(String userName, String userPassword) {
-        String userName = userSafeMapper.selectByLogin()
-        return null;
+        String resultUserName = userSafeMapper.selectByLogin(userName,userPassword);
+        return resultUserName;
     }
 }

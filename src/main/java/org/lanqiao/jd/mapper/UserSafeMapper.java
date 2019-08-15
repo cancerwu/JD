@@ -1,7 +1,10 @@
 package org.lanqiao.jd.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.lanqiao.jd.entity.UserSafe;
 
+@Mapper
 public interface UserSafeMapper {
     int deleteByPrimaryKey(Integer uesrId);
 

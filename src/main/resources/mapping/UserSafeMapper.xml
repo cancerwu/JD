@@ -9,6 +9,7 @@
     <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
     <result column="user_status" property="userStatus" jdbcType="VARCHAR" />
   </resultMap>
+
   <sql id="Base_Column_List" >
     uesr_id, user_name, user_tel, user_password, user_email, user_status
   </sql>
@@ -18,11 +19,10 @@
     from usersafe
     where uesr_id = #{uesrId,jdbcType=INTEGER}
   </select>
-  <select id="selectByLogin" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select
-    <include refid="Base_Column_List" />
+  <select id="selectByLogin" resultType="java.lang.String" parameterType="java.lang.String" >
+    select user_tel
     from usersafe
-    where uesr_name = #{uesrName,jdbcType=VARCHAR},uesr_password = #{uesrPassword,jdbcType=VARCHAR}
+    where user_name = #{userName,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
   </select>
 
 
