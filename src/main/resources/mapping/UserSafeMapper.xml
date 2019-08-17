@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.lanqiao.jd.mapper.UserSafeMapper" >
   <resultMap id="BaseResultMap" type="org.lanqiao.jd.entity.UserSafe" >
-    <id column="uesr_id" property="uesrId" jdbcType="INTEGER" />
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="user_tel" property="userTel" jdbcType="VARCHAR" />
     <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
@@ -11,20 +11,33 @@
   </resultMap>
 
   <sql id="Base_Column_List" >
-    uesr_id, user_name, user_tel, user_password, user_email, user_status
+    user_id, user_name, user_tel, user_password, user_email, user_status
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     from usersafe
-    where uesr_id = #{uesrId,jdbcType=INTEGER}
-  </select>
-  <select id="selectByLogin" resultType="java.lang.String" parameterType="java.lang.String" >
-    select user_tel
-    from usersafe
-    where user_name = #{userName,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=INTEGER}
   </select>
 
+
+
+  <select id="selectByUserName" resultType="java.lang.String" parameterType="java.lang.String" >
+    select user_name
+    from usersafe
+    where user_name = #{userinput,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
+  </select>
+  <select id="selectByUserEmail" resultType="java.lang.String">
+    select user_name
+    from usersafe
+    where user_email = #{userinput,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByUserTel" resultType="java.lang.String">
+    select user_name
+    from usersafe
+    where user_tel = #{userinput,jdbcType=VARCHAR} and user_password = #{userPassword,jdbcType=VARCHAR}
+  </select>
 
 
 
@@ -39,21 +52,21 @@
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from usersafe
-    where uesr_id = #{uesrId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="org.lanqiao.jd.entity.UserSafe" >
-    insert into usersafe (uesr_id, user_name, user_tel, 
+    insert into usersafe (user_id, user_name, user_tel,
       user_password, user_email, user_status
       )
-    values (#{uesrId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR}, 
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR},
       #{userPassword,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userStatus,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="org.lanqiao.jd.entity.UserSafe" >
     insert into usersafe
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="uesrId != null" >
-        uesr_id,
+      <if test="userId != null" >
+        user_id,
       </if>
       <if test="userName != null" >
         user_name,
@@ -72,8 +85,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="uesrId != null" >
-        #{uesrId,jdbcType=INTEGER},
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
       </if>
       <if test="userName != null" >
         #{userName,jdbcType=VARCHAR},
@@ -111,7 +124,7 @@
         user_status = #{userStatus,jdbcType=VARCHAR},
       </if>
     </set>
-    where uesr_id = #{uesrId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="org.lanqiao.jd.entity.UserSafe" >
     update usersafe
@@ -120,6 +133,6 @@
       user_password = #{userPassword,jdbcType=VARCHAR},
       user_email = #{userEmail,jdbcType=VARCHAR},
       user_status = #{userStatus,jdbcType=VARCHAR}
-    where uesr_id = #{uesrId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
   </update>
 </mapper>

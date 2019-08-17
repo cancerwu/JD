@@ -14,9 +14,11 @@ public class LoginController {
     LoginService loginService;
 
     @PostMapping("/login")
-    public String selectByLogin( String userName,  String userPassword){
-        String resultUserName = loginService.selectByLogin(userName,userPassword);
+    public String selectByLogin( String userinput,  String userPassword){
+        String resultUserName = loginService.selectByLogin(userinput,userPassword);
+        System.out.println(resultUserName);
         return resultUserName;
     }
+
 
 }

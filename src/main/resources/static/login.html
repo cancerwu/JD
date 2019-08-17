@@ -7,9 +7,11 @@
     <link href="css/base.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script>
-        $(function () {
 
+        $(function () {
+            $(".msg-error").css("display","none");
             //扫码和登录选项
             $(".login-box").css("display","none");
             $(".login-tab-r").click(function () {
@@ -26,22 +28,34 @@
             $("#loginsubmit").click(function () {
                 var input1 = $("#loginname").val();
                 var input2 = $("#nloginpwd").val();
-
+                var dbresult = "";
                 $.ajax({
                     url:"/login",
                     type:"post",
                     data:{
-                        'userName':input1,
+                        'userinput':input1,
                         'userPassword':input2
                     },
-                    datatype:"json",
+                    datatype:"text",
                     success:function (data) {
-                        console.log(data);
+
                     },
                     error:function () {
                         alert("出错");
                     }
                 })
+                function successService(data){
+                    if(data == ""){
+                        $(".msg-error").css("display","block");
+                    }
+                    else if(data =="error"){
+                        alert("格式错误");
+                    }else{
+                        dbresult = data;
+                    }
+                }
+                console.log(dbresult);
+                $.cookie("login",dbresult);
             })
 
         })

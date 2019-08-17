@@ -1,7 +1,7 @@
 package org.lanqiao.jd.entity;
 
 public class UserSafe {
-    private Integer uesrId;
+    private Integer userId;
 
     private String userName;
 
@@ -13,12 +13,12 @@ public class UserSafe {
 
     private String userStatus;
 
-    public Integer getUesrId() {
-        return uesrId;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUesrId(Integer uesrId) {
-        this.uesrId = uesrId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {

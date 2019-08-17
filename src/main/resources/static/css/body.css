@@ -1,0 +1,448 @@
+.allbody{
+    background-color: #E3E4E5;
+    width: 100%;
+}
+#partone{
+
+    margin: auto;
+    height: 480px;
+    width: 1190px;
+}
+#partone .leftcol{
+    float: left;
+    height: 478px;
+    width: 188px;
+    border:solid 1px #E3E4E5;
+}
+#partone .leftcollist{
+    margin: 10px 0 0;
+    padding-top: 10px;
+    height: 459px;
+    width: 178px;
+    background-color: white;
+}
+.lis{
+    height: 25px;
+    padding:0 0 0 18px;
+}
+.cate_menu_lk {
+    font-size: 14px;
+    color: #333;
+    transition: color ease 0.2s;
+}
+#partone .middlecol{
+    float: left;
+    width: 790px;
+    height: 470px;
+    margin: 10px 10px 0 0;
+
+}
+#partone .middlecol .turnimg{
+    float: left;
+    height: 470px;
+    width: 590px;
+    border: 0;
+    vertical-align: middle;
+}
+#partone .middlecol .listimg li{
+    float: right;
+    height: 150px;
+    width: 190px;
+    margin-bottom: 10px;
+}
+#partone .liimg img{
+    height: 150px;
+    width: 190px;
+}
+#partone .rightcol{
+    margin: 10px 10px 0 0;
+    float: left;
+    width: 190px;
+    height: 470px;
+    background-color: white;
+}
+/*用户部分*/
+.userpart{
+    width: 190px;
+    height: 64px;
+
+}
+.userimg img{
+    float: left;
+    margin-top: 15px;
+    margin-left: 18px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.user_show {
+    float: left;
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+.user_show p{
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+}
+#user_profit {
+    height: 25px;
+    font-size: 0;
+    text-align: center;
+}
+.user_profit_lk {
+    display: inline-block;
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    border-radius: 13px;
+    background: #e1251b;
+
+}
+.user_profit_lk_plus {
+    background: #363634;
+}
+#user_profit a:hover{
+        background: brown;
+        color: white;
+}
+/*新闻部分*/
+.news{
+    height: 130px;
+}
+.news_title{
+    height: 20px;
+    padding: 10px 0 0;
+    margin-bottom: 8px;
+
+}
+.news .news_tit {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+}
+.news .news_more {
+    float: right;
+    font-size: 12px;
+    color: #999;
+}
+.news .news_list {
+    margin: 0 15px;
+    height: 88px;
+
+}
+.news .news_item {
+    max-width: 160px;
+    _width: 160px;
+    height: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #999;
+    margin-bottom: 6px;
+}
+.news_tag {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    height: 16px;
+    width: 35px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    color: #e1251b;
+    background-color: rgba(225, 37, 27, 0.08);
+    margin-right: 6px;
+}
+/*服务部份*/
+#services{
+    margin-top: 12px;
+    overflow: hidden;
+    height: 238px;
+}
+.services_entry {
+    overflow: hidden;
+    padding: 5px 0.5px 5px 0.5px;
+    background: #fff;
+}
+.service_list {
+    padding-top: 5px;
+    height: 225px;
+}
+.service_frame {
+    overflow: visible;
+}
+.service_item {
+    float: left;
+    width: 63px;
+    height: 55px;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+.service_lk {
+    display: block;
+    position: relative;
+    transition: all linear 0.2s;
+}
+.service_ico {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+}
+.service_ico_img, .service_ico_img_hover {
+    width: 28px;
+    height: 28px;
+}
+.service_ico_img_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+.service_txt {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    color: #333;
+    transition: color ease 0.15s;
+}
+/*秒杀部分*/
+.miaosha{
+    height: 260px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.miaosha_inner{
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    width: 1180px;
+    margin:auto;
+}
+.miaosha_countdown {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 100%;
+    color: #fff;
+    background-color: #e83632;
+    background-image: url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/img/4a15d88….png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.miaosha_countdown {
+    background-image: url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/img/613f39ecb60e42dfec798a4ffc0bc012.png);
+}
+.miaosha_countdown .countdown-main {
+    margin-left: 30px;
+    margin-right: auto;
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    display: block;
+}
+.miaosha_countdown .countdown_title {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 31px;
+}
+.miaosha_countdown .countdown-desc {
+    margin-top: 90px;
+    font-size: 14px;
+    text-align: center;
+}
+.miaosha_countdown .countdown-desc strong {
+    font-size: 18px;
+    padding-right: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -1px;
+}
+.miaosha_countdown .countdown-main .timmer__unit {
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #2f3430;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+.miaosha_countdown .countdown-main .timmer__unit:after {
+    content: ':';
+    display: block;
+    position: absolute;
+    right: -20px;
+    font-weight: bolder;
+    font-size: 15px;
+    width: 20px;
+    height: 100%;
+    top: 0;
+}
+.seckill-countdown .countdown-main .timmer__unit--second:after {
+     content: none;
+ }
+.timmer .timmer__unit:last-child:after {
+    content: '';
+}
+/*秒杀列表*/
+#seckill_center .seckill_iteam {
+    width: 203.3px;
+    height: 260px;
+    text-align: center;
+}
+
+#seckill_center img {
+    padding-top: 30px;
+}
+
+#seckill_center h6 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+    margin-top: 13px;
+}
+
+#seckill_price {
+    border: 1px solid #e1251b;
+    position: relative;
+    box-sizing: border-box;
+    line-height: 24px;
+    overflow: hidden;
+    background-color: #e1251b;
+    width: 160px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+}
+
+.seckill_iteam_line {
+    width: 1px;
+    height: 260px;
+    background: linear-gradient(180deg, white, #eeeeee, white);
+}
+
+.seckill_price_now {
+    width: 92px;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    float: left;
+}
+
+.seckill_price_now:before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-width: 22px 8px 0 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    top: 0;
+    left: 84px;
+}
+
+.seckill_price_origin {
+    height: 100%;
+    width: 66px;
+    float: right;
+    background: #fff;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+    box-sizing: border-box;
+    text-decoration: line-through;
+    vertical-align: top;
+}
+
+#seckill_right img {
+    margin-top: 10px;
+}
+
+/*搜索栏*/
+#float_top2{
+    position: fixed;
+    left: auto;
+    top: 0;
+    display: none;
+    height: 52px;
+    width: 100%;
+    border-bottom: 2px solid #c81623;
+    background-color: #ffffff;
+    margin: auto;
+
+}
+#search_top_left_float {
+    width: 530px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 100px;
+    float: left;
+}
+
+#keyword_float {
+    padding: 2px 44px 2px 17px;
+    width: 400px;
+    height: 25px;
+    border: 2px solid #e1251b;
+    line-height: 25px;
+    font-size: 14px;
+    float: left;
+}
+
+#search_top_left_float img {
+    float: left;
+}
+
+/*购物车*/
+#search_top_center_float {
+    width: 140px;
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+    float: left;
+    margin-top: 10px;
+    border: 1px solid #eeeeee;
+}
+
+#search_top_center_float .ci-count {
+    position: relative;
+    top: -8px;
+    left: -6px;
+    right: auto;
+    display: inline-block;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
+}

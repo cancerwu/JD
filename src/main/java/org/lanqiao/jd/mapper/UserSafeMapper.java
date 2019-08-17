@@ -6,17 +6,22 @@ import org.lanqiao.jd.entity.UserSafe;
 
 @Mapper
 public interface UserSafeMapper {
-    int deleteByPrimaryKey(Integer uesrId);
+    int deleteByPrimaryKey(Integer userId);
 
     int insert(UserSafe record);
 
     int insertSelective(UserSafe record);
 
-    UserSafe selectByPrimaryKey(Integer uesrId);
+    UserSafe selectByPrimaryKey(Integer userId);
 
     int updateByPrimaryKeySelective(UserSafe record);
 
     int updateByPrimaryKey(UserSafe record);
 
-    String selectByLogin(String userName,String userPassword);
+    String selectByUserName(String userinput,String userPassword);
+
+    String selectByUserTel(String userinput,String userPassword);
+
+    String selectByUserEmail(String userinput,String userPassword);
+
 }
