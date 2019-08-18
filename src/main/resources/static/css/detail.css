@@ -1,0 +1,87 @@
+#fenquDiv{
+	width: 100%;
+	height: 40px;
+}
+#fenquDiv ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#fenquDiv span{
+	float: left;
+	margin-left: 50px;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#fenquDiv span:hover{
+	cursor: pointer;
+	color: blue;
+}
+#fenquDiv li{
+	float: left;
+	font-size: 14px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#fenquDiv li:hover{
+	cursor: pointer;
+	color: blue;
+}
+
+
+
+#bodyDiv{
+	width: 1100px;
+	height: 501px;
+	margin: auto;
+}
+#imgBox{
+	width: 400px;
+	height: 500px;
+	float:left;
+}
+#imgBox img{
+	width: 100%;
+	height: 100%;
+}
+
+#proDetail{
+	width: 696px;
+	height: 500px;
+	float: left;
+}
+#proDetail_1{
+	width: 100%;
+	height: 50%;
+}
+#pro_desc_div{
+	width: 100%;
+	height: 30%;
+}
+#pro_desc_div h1{
+	font-size: 16px;
+}
+#proDetail_2{
+	width: 89%;
+	height:35%;
+	background-color: lightgrey;
+}
+#proDetail_2 h2{
+	font-size: 16px;
+
+}
+
+#pro_buy{
+	width: 100px;
+	height: 20px;
+	border: 1px solid black;
+	background-color: red;
+	float: left;
+}
+#pro_cart{
+	width: 100px;
+	height: 20px;
+	border: 1px solid black;
+	background-color: blue;
+	float: left;
+}

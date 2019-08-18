@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.jd.mapper.ProductMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.jd.entity.Product" >
+    <id column="pro_id" property="pro_id" jdbcType="INTEGER" />
+    <result column="pro_name" property="pro_name" jdbcType="VARCHAR" />
+    <result column="pro_weight" property="pro_weight" jdbcType="DOUBLE" />
+    <result column="pro_color" property="pro_color" jdbcType="VARCHAR" />
+    <result column="pro_issued_date" property="pro_issued_date" jdbcType="TIMESTAMP" />
+    <result column="pro_price" property="pro_price" jdbcType="DOUBLE" />
+    <result column="pro_producted_date" property="pro_producted_date" jdbcType="TIMESTAMP" />
+    <result column="pro_describe" property="pro_describe" jdbcType="VARCHAR" />
+    <result column="pro_count" property="pro_count" jdbcType="INTEGER" />
+    <result column="kind_id" property="kind_id" jdbcType="INTEGER" />
+    <result column="brand_id" property="brand_id" jdbcType="INTEGER" />
+    <result column="pro_img" property="pro_img" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pro_id, pro_name, pro_weight, pro_color, pro_issued_date, pro_price, pro_producted_date, 
+    pro_describe, pro_count, kind_id, brand_id, pro_img
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from product
+    where pro_id = #{pro_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from product
+    where pro_id = #{pro_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.jd.entity.Product" >
+    insert into product (pro_id, pro_name, pro_weight, 
+      pro_color, pro_issued_date, pro_price, 
+      pro_producted_date, pro_describe, pro_count, 
+      kind_id, brand_id, pro_img
+      )
+    values (#{pro_id,jdbcType=INTEGER}, #{pro_name,jdbcType=VARCHAR}, #{pro_weight,jdbcType=DOUBLE}, 
+      #{pro_color,jdbcType=VARCHAR}, #{pro_issued_date,jdbcType=TIMESTAMP}, #{pro_price,jdbcType=DOUBLE}, 
+      #{pro_producted_date,jdbcType=TIMESTAMP}, #{pro_describe,jdbcType=VARCHAR}, #{pro_count,jdbcType=INTEGER}, 
+      #{kind_id,jdbcType=INTEGER}, #{brand_id,jdbcType=INTEGER}, #{pro_img,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.jd.entity.Product" >
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pro_id != null" >
+        pro_id,
+      </if>
+      <if test="pro_name != null" >
+        pro_name,
+      </if>
+      <if test="pro_weight != null" >
+        pro_weight,
+      </if>
+      <if test="pro_color != null" >
+        pro_color,
+      </if>
+      <if test="pro_issued_date != null" >
+        pro_issued_date,
+      </if>
+      <if test="pro_price != null" >
+        pro_price,
+      </if>
+      <if test="pro_producted_date != null" >
+        pro_producted_date,
+      </if>
+      <if test="pro_describe != null" >
+        pro_describe,
+      </if>
+      <if test="pro_count != null" >
+        pro_count,
+      </if>
+      <if test="kind_id != null" >
+        kind_id,
+      </if>
+      <if test="brand_id != null" >
+        brand_id,
+      </if>
+      <if test="pro_img != null" >
+        pro_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pro_id != null" >
+        #{pro_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_name != null" >
+        #{pro_name,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_weight != null" >
+        #{pro_weight,jdbcType=DOUBLE},
+      </if>
+      <if test="pro_color != null" >
+        #{pro_color,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_issued_date != null" >
+        #{pro_issued_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pro_price != null" >
+        #{pro_price,jdbcType=DOUBLE},
+      </if>
+      <if test="pro_producted_date != null" >
+        #{pro_producted_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pro_describe != null" >
+        #{pro_describe,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_count != null" >
+        #{pro_count,jdbcType=INTEGER},
+      </if>
+      <if test="kind_id != null" >
+        #{kind_id,jdbcType=INTEGER},
+      </if>
+      <if test="brand_id != null" >
+        #{brand_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_img != null" >
+        #{pro_img,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.jd.entity.Product" >
+    update product
+    <set >
+      <if test="pro_name != null" >
+        pro_name = #{pro_name,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_weight != null" >
+        pro_weight = #{pro_weight,jdbcType=DOUBLE},
+      </if>
+      <if test="pro_color != null" >
+        pro_color = #{pro_color,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_issued_date != null" >
+        pro_issued_date = #{pro_issued_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pro_price != null" >
+        pro_price = #{pro_price,jdbcType=DOUBLE},
+      </if>
+      <if test="pro_producted_date != null" >
+        pro_producted_date = #{pro_producted_date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pro_describe != null" >
+        pro_describe = #{pro_describe,jdbcType=VARCHAR},
+      </if>
+      <if test="pro_count != null" >
+        pro_count = #{pro_count,jdbcType=INTEGER},
+      </if>
+      <if test="kind_id != null" >
+        kind_id = #{kind_id,jdbcType=INTEGER},
+      </if>
+      <if test="brand_id != null" >
+        brand_id = #{brand_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_img != null" >
+        pro_img = #{pro_img,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where pro_id = #{pro_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.jd.entity.Product" >
+    update product
+    set pro_name = #{pro_name,jdbcType=VARCHAR},
+      pro_weight = #{pro_weight,jdbcType=DOUBLE},
+      pro_color = #{pro_color,jdbcType=VARCHAR},
+      pro_issued_date = #{pro_issued_date,jdbcType=TIMESTAMP},
+      pro_price = #{pro_price,jdbcType=DOUBLE},
+      pro_producted_date = #{pro_producted_date,jdbcType=TIMESTAMP},
+      pro_describe = #{pro_describe,jdbcType=VARCHAR},
+      pro_count = #{pro_count,jdbcType=INTEGER},
+      kind_id = #{kind_id,jdbcType=INTEGER},
+      brand_id = #{brand_id,jdbcType=INTEGER},
+      pro_img = #{pro_img,jdbcType=VARCHAR}
+    where pro_id = #{pro_id,jdbcType=INTEGER}
+  </update>
+</mapper>
