@@ -2,7 +2,6 @@
 
     width: 990px;
 
-    background-color: cornflowerblue;
     position: absolute;
     left: 265px;
     top: 30px;
@@ -10,74 +9,79 @@
 #con1{
     height: 116px;
     width: 990px;
-    background-color: chocolate;
+
 }
 #con2{
     width: 990px;
+
 }
 #con3{
     height: 40px;
     width: 990px;
-    background-color: cyan;
+    border:2px solid;
+    background-color:#999999;
 }
 #con4{
     width: 990px;
 }
 #con5{
+    border:2px solid;
     height: 40px;
     width: 990px;
-    background-color: crimson;
+    background-color: #cccccc;
+    border:2px solid;
 }
 #con6{
     height: 50px;
     width: 990px;
-    background-color: gold;
+    background-color: white;
+    border:1px solid;
 }
 .detail{
     height: 40px;
     width: 600px;
-    background-color: darkviolet;
+
     float: left;
 }
 .recevice{
     height: 40px;
     width: 100px;
-    background-color: darkgreen;
+
     float: left;
 }
 .total{
     height: 40px;
     width: 100px;
-    background-color: darkviolet;
+
     float: left;
 }
 .status{
     height: 40px;
     width: 100px;
-    background-color: gray;
+
     float: left;
 }
 .time{
     height: 40px;
     width: 300px;
-    background-color: darkorange;
+
     float: left;
 }
 .id{
     height: 40px;
     width: 300px;
-    background-color: darkred;
+
     float: left;
 }
 .product{
     height: 40px;
     width: 500px;
-    background-color: darkmagenta;
+
     float: left;
 }
 .num{
     height: 40px;
     width: 100px;
-    background-color: lawngreen;
+
     float: left;
 }

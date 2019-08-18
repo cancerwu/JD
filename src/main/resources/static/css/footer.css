@@ -35,7 +35,8 @@
     padding: 20px 0;
     margin-bottom: 14px;
     background: #F5F5F5;
-    text-align: center
+    text-align: center;
+    float: left;
 }
 
 #service-2014 .slogan img {

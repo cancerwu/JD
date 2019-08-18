@@ -2,7 +2,7 @@
 
     width: 990px;
 
-    background-color: cornflowerblue;
+
     position: absolute;
     left: 265px;
     top: 137px;
@@ -10,60 +10,60 @@
 #con1{
     height: 116px;
     width: 990px;
-    background-color: chocolate;
+
 }
 #con2{
     height: 42px;
     width: 990px;
-    background-color: coral;
+
 }
 #con3{
      height: 40px;
      width: 990px;
-     background-color: crimson;
+
  }
 #con4{
       height: 30px;
-      width: 990px;
-      background-color: chocolate;
+      width: 600px;
+    border:2px solid;
   }
 .re_name{
     height: 30px;
     width: 50px;
-    background-color: forestgreen;
+
     float: left;
 }
 .re_tel{
     height: 30px;
     width: 75px;
-    background-color: cornflowerblue;
+
     float: left;
 }
 .re_ad{
     height: 30px;
     width: 200px;
     float: left;
-    background-color: crimson;
+
 }
 #con5{
        height: 28px;
        width: 990px;
-       background-color: cyan;
+
    }
 #con6{
         height: 18px;
         width: 990px;
-        background-color: chocolate;
+
     }
 #con7{
     height: 40px;
     width: 990px;
-    background-color: cornflowerblue;
+
 }
 #con8{
      height: 40px;
      width: 990px;
-     background-color: chocolate;
+
  }
 #con9{
     position: relative;
@@ -72,7 +72,7 @@
     float: left;
     height: 30px;
     width: 90px;
-    background-color: cornflowerblue;
+
 }
 #con10{
     position: relative;
@@ -81,12 +81,12 @@
     float: left;
     height: 30px;
     width: 90px;
-    background-color: cornflowerblue;
+
 }
 #con11{
     height: 40px;
     width: 990px;
-    background-color: darkkhaki;
+
     float: left;
 }
  .ch1{
@@ -122,55 +122,55 @@
 #order{
     height: 40px;
     width: 990px;
-    background-color: darkkhaki;
+
 }
 #order1{
     height: 60px;
     width: 600px;
-    background-color: lightblue;
+    border:2px solid;
     float: left;
 }
 #order2{
     height: 60px;
     width: 600px;
-    background-color: lightblue;
+
 }
 #order3{
     height: 60px;
     width: 600px;
-    background-color: lightblue;
+
     float: left;
 }
 .pro_img
 {
     height: 60px;
     width: 100px;
-    background-color: coral;
+
     float:left;
 }
 .pro_id
 {
     height: 60px;
     width: 100px;
-    background-color: cornflowerblue;
+
     float:left;
 }
 .pro_name{
     height: 60px;
     width: 100px;
-    background-color: crimson;
+
     float: left;
 }
 .pro_price{
     height: 60px;
     width: 100px;
-    background-color: coral;
+
     float:left;
 }
 .pro_num {
     height: 60px;
     width: 100px;
-    background-color: crimson;
+
     float: left;
 }
 
