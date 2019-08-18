@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史订单</title>
+</head>
+<link href="css/orders/base.css" rel="stylesheet">
+<link href="css/orders/index.css" rel="stylesheet">
+
+<link href="css/orders/selorder.css" rel="stylesheet">
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: "http://localhost:8080/selectAll/1",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                 var f=-1;
+                for (var j=0;j<data.length;j++)
+                {
+                    var $div3=("   <div id=\"con4\">\n" +
+                        "            </div>")
+                   if (f!=data[j].order_id){
+                      f = data[j].order_id;
+                       var $div1=("   <div id=\"con5\">\n" +
+                           "                <div class=\"time\">"+data[j].order_time+"</div>\n" +
+                           "                <div class=\"id\">"+data[j].order_id+"</div>\n"+
+                           "                <div class=\"recevice\">"+data[j].receive_name+"</div>\n"+
+                           "                <div class=\"total\">"+data[j].total+"</div>\n" +
+                           "                <div class=\"status\">"+data[j].order_status+"</div>\n" +
+                           "            </div>")
+                       $("div[id='con2']").append($div1);
+                       for (var i=0;i<data.length;i++){
+
+                           if (data[j].order_id == data[i].order_id){
+                               var $div2=("   <div id=\"con6\">\n" +
+                                   "                <div class=\"product\">"+data[i].pro_name+"</div>\n" +
+                                   "                <div class=\"num\">"+data[i].pro_num+"</div>\n" +
+                                   "            </div>")
+                               $("div[id='con2']").append($div2);
+                           }
+                       }
+                   }
+                }
+            }
+        })
+    })
+</script>
+<body>
+<a name="top"></a>
+<div id="menu">
+    <div id="menu_content">
+        <ul id="m_left">
+            <li class="iconfont red font14"></li>
+            <li>北京</li>
+        </ul>
+        <ul id="m_right">
+            <li id="m_right_first">你好，请登录 &nbsp;<span class="red">免..</span></li>
+            <li class="spacer"></li>
+            <li class="dt"><a>我的订单</a></li>
+            <li class="spacer"></li>
+            <li class="dt1"><a>我的京东</a><i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt"><a>京东会员</a></li>
+            <li class="spacer"></li>
+            <li class="dt1"><span class="red">企业采购</span><i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt1">客户服务<i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt1">网站导航<i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt">手机京东</li>
+        </ul>
+    </div>
+</div>
+<div id="container">
+    <div id="con1">
+       <h1>我的订单</h1>
+    </div>
+    <div id="con2">
+        <div id="con3">
+            <div class="detail">订单详情</div>
+            <div class="recevice">收货人</div>
+            <div class="total">总价</div>
+            <div class="status">订单状态</div>
+        </div>
+        <div id="con4">
+            <div id="con5">
+               <div class="time">时间</div>
+                <div class="id">订单号</div>
+                <div class="recevice"></div>
+                <div class="total"></div>
+                <div class="status"></div>
+            </div>
+            <div id="con6">
+                <div class="product"></div>
+                <div class="num"></div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

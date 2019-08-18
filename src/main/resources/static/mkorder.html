@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="css/orders/base.css" rel="stylesheet">
+<link href="css/orders/index.css" rel="stylesheet">
+<link href="css/orders/order.css" rel="stylesheet">
+<link href="css/orders/order2.css" rel="stylesheet">
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+    //   $.ajax({
+    //
+    //         url: "http://localhost:8080/selectAddress/1",
+    //         type: "post",
+    //         dataType: "json",
+    //         success: function (data) {
+    //             // data.each(function (index,element) {
+    //             //     var $li = $("<li>"<li>element.username+"</li>");
+    //             //     $("ul").append($li)
+    //             // })
+    //             for (var i = 0; i < data.length; i++) {
+    //
+    //                 var $div2=("   <div id=\"2\">\n" +
+    //
+    //                     "                <div class=\"re_name\">"+data[i].receive_name+"</div>\n" +
+    //                     "                <div class=\"re_tel\">"+data[i].receive_tel+"</div>\n"+
+    //                     "                <div class=\"re_ad\">"+data[i].province+"</div>\n" +
+    //
+    //                     "            </div>")
+    //                 $("div[id='con4']").append($div2);
+    //             }
+    //         }
+    //     })
+
+        $.ajax({
+
+
+            url: "http://localhost:8080/selectAll/1",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                // data.each(function (index,element) {
+                //     var $li = $("<li>"<li>element.username+"</li>");
+                //     $("ul").append($li)
+                // })
+                var $div3=(" <div class=\"pro_num\">"+data[0].total+"</div>\n")
+
+                $("div[id='order3']").append($div3);
+                                var $div2=("   <div id=\"2\">\n" +
+
+                                    "                <div class=\"re_name\">"+data[0].receive_name+"</div>\n" +
+                                    "                <div class=\"re_tel\">"+data[0].receive_tel+"</div>\n"+
+                                    "                <div class=\"re_ad\">"+data[0].province  +   data[0].city+   data[0].district+   data[0].address_name+"</div>\n" +
+
+                                    "            </div>")
+                                $("div[id='con4']").append($div2);
+                for (var i = 0; i < data.length; i++) {
+
+
+                    // var $div = (" <div class=\"article1\">\n" +
+                    //     "                            <div class=\"author\">用户：" + data[i].author + "<span>" + data[i].id + "#</span></div>\n" +
+                    //     "                        <div class=\"content\">" + data[i].messages + "</div>\n" +
+                    //     "                             <div class=\"time page\">发表于：" + data[i].date + "</div>\n" +
+                    //     "                         </div>");
+                    var $div1=("   <div id=\"order1\">\n" +
+                        "                <div class=\"pro_img\"></div>\n" +
+                        "                <div class=\"pro_id\">"+data[i].pro_id+"</div>\n" +
+                        "                <div class=\"pro_name\">"+data[i].pro_name+"</div>\n"+
+                        "                <div class=\"pro_price\">"+data[i].pro_price+"</div>\n" +
+                        "                <div class=\"pro_num\">"+data[i].pro_num+"</div>\n" +
+                        "            </div>")
+                    // $("ul").append($li);
+                    // $("div[class='article']").after($div);
+                    $("div[id='1']").append($div1);
+                }
+            }
+        })
+        $(function () {
+            $("input[value='发表']").click(function () {
+                $.ajax({
+                    url :"http://localhost:8080/AOrder",
+                    type:"post",
+                    data:{'order_id':"1",'order_status':"1"},
+                    dataType:"json",
+                    success :function (data) {
+                        if (data){
+                            location.href="cdorder.html";
+                        }
+                        else {
+                            alert("发送失败!!!!");
+                        }
+                    }
+
+
+                });
+            })
+        })
+    })
+</script>
+<body>
+<a name="top"></a>
+<div id="menu">
+    <div id="menu_content">
+        <ul id="m_left">
+            <li class="iconfont red font14"></li>
+            <li>北京</li>
+        </ul>
+        <ul id="m_right">
+            <li id="m_right_first">你好，请登录 &nbsp;<span class="red">免..</span></li>
+            <li class="spacer"></li>
+            <li class="dt"><a>我的订单</a></li>
+            <li class="spacer"></li>
+            <li class="dt1"><a>我的京东</a><i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt"><a>京东会员</a></li>
+            <li class="spacer"></li>
+            <li class="dt1"><span class="red">企业采购</span><i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt1">客户服务<i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt1">网站导航<i class="iconfont"></i></li>
+            <li class="spacer"></li>
+            <li class="dt">手机京东</li>
+        </ul>
+    </div>
+</div>
+
+    <div class="w w1 header clearfix">
+        <!--<div id="logo">
+                        <a href="http://www.jd.com/" class="link1" target="_blank"><img src="//misc.360buyimg.com/lib/img/e/logo-201305.png" alt="京东商城"></a>
+                    <a href="#none" class="link2"><b></b>"结算页"</a>
+        </div>-->
+        <div id="logo-2014">
+            <a href="http://www.jd.com/" class="logo" target="_blank"></a>
+            <a href="#none" class="link2"><b></b>"结算页"</a>
+        </div>
+
+        <div class="stepflex" id="#sflex03">
+            <dl class="first done">
+                <dt class="s-num">1</dt>
+                <dd class="s-text">1.我的购物车<s></s><b></b></dd>
+            </dl>
+            <dl class="normal doing">
+                <dt class="s-num">2</dt>
+                <dd class="s-text">2.填写核对订单信息<s></s><b></b></dd>
+            </dl>
+            <dl class="normal last">
+                <dt class="s-num">3</dt>
+                <dd class="s-text">3.成功提交订单<s></s><b></b></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="container">
+
+        <div id="con2">
+            <h1 class="ch1">填写并核对订单信息</h1>
+        </div>
+        <div id="con1">
+        <div id="con3">
+            <h2 class="ch2">收货人信息</h2>
+        </div>
+            <div id="con4">
+<!--            <div id="2">-->
+<!--             -->
+<!--                    <div class="re_name"></div>-->
+<!--                    <div class="re_tel"></div>-->
+<!--                    <div class="re_ad"></div>-->
+<!--               </div>-->
+           </div>
+        <div id="con5">
+            <h2 class="ch3">更多地址</h2>
+        </div>
+        <div id="con6">
+            <h2 class="ch4">对不起，未找到附近自提点</h2>
+        </div>
+        </div>
+        <div id="con7">
+            <h1 class="ch5">支付方式</h1>
+        </div>
+        <div id="con8">
+            <form>
+            <div id="con9">
+                <h4 class="pay">
+
+                <input type="radio" name="paytype" value="offline"checked>货到付款
+                <br>
+            </h4></div>
+            <div id="con10">
+                <h4 class="pay">
+
+
+                <input type="radio" name="paytype" value="online">在线支付
+                <br>
+                </h4>
+            </div>
+        </form>
+        </div>
+        <div id="order">订单清单
+        </div>
+            <div id="1">
+            <div id="order1">
+                <div class="pro_img"></div>
+                <div class="pro_id"></div>
+                <div class="pro_name"></div>
+                <div class="pro_price"></div>
+                <div class="pro_num"></div>
+
+            </div>
+            </div>
+        <div id="order3">
+            <div class="pro_img"></div>
+            <div class="pro_id"></div>
+            <div class="pro_name"></div>
+            <div class="pro_price">总价格为</div>
+
+
+        </div>
+
+    <div id="con11">
+            <div align="center"><input type="button" value="发表"/></div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
