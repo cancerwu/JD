@@ -14,6 +14,26 @@
     <script>
 
         $(function () {
+            $.ajax({
+                url:"/getLoginUserName",
+                type:"post",
+                datatype:"text",
+                success:function (data) {
+                    if(data==""){
+                        $("#ttbar-login").html("<a href='#'>请登录</a>&nbsp;&nbsp;<a href='#'>免费注册</a>");
+                    }
+                    else{
+                        $("#ttbar-login").html("你好！"+data);
+                    }
+
+
+                }
+            })
+
+
+
+
+
             var miaosha_height = $("#partone").offset().top;
             $(window).scroll(function () {
                 var this_scroll = $(this).scrollTop();
@@ -25,8 +45,7 @@
 
                 }
             })
-            var params = $.cookie("login");
-            console.log(params);
+
         });
 
     </script>
@@ -39,8 +58,9 @@
             <li><span class="ui-areamini-text" data-id="16" title="福建">福建</span></li>
         </ul> <!--标题栏左侧地址-->
         <ul style="margin-top: 7px" class="fr">
-            <li id="ttbar-login" class="#"><a href="#">请登录</a>
-                &nbsp;&nbsp;<a href="#">免费注册</a></li>
+            <li id="ttbar-login" class="#">
+<!--                <a href="#">请登录</a>&nbsp;&nbsp;<a href="#">免费注册</a>-->
+            </li>
             <li class="spacer"></li>
             <li>
                 <div class="dt">
@@ -94,7 +114,7 @@
             <div class="form">
                 <div class="search_form">
                     <form style="margin-top: 5px;margin-left: 10px"><input style="border: 0px" name="search" type="text"
-                                                                           size="60" value="shangpin"></form>
+                                                                           size="60" value="无线鼠标"></form>
                 </div>
                 <button class="button"><i class="iconfont" style="color: white"></i>
                 </button>
