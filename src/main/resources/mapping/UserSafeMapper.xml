@@ -40,7 +40,20 @@
   </select>
 
 
-
+  <select id="sameTel" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select count(*) from usersafe where user_tel = #{userTel}
+  </select>
+  <select id="sameName" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select count(*) from usersafe where user_name =#{userName}
+  </select>
+  <insert id="insert" parameterType="org.lanqiao.jd.entity.UserSafe" >
+    insert into usersafe (user_name, user_tel,
+      user_password, user_email
+      )
+    values (#{userName,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR},
+      #{userPassword,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}
+      )
+  </insert>
 
 
 
@@ -54,14 +67,9 @@
     delete from usersafe
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="org.lanqiao.jd.entity.UserSafe" >
-    insert into usersafe (user_id, user_name, user_tel,
-      user_password, user_email, user_status
-      )
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userTel,jdbcType=VARCHAR},
-      #{userPassword,jdbcType=VARCHAR}, #{userEmail,jdbcType=VARCHAR}, #{userStatus,jdbcType=VARCHAR}
-      )
-  </insert>
+
+
+
   <insert id="insertSelective" parameterType="org.lanqiao.jd.entity.UserSafe" >
     insert into usersafe
     <trim prefix="(" suffix=")" suffixOverrides="," >
