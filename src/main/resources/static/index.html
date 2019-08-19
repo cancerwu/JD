@@ -16,7 +16,7 @@
         $(function () {
             $.ajax({
                 url:"/getLoginUserName",
-                type:"post",
+                type:"get",
                 datatype:"text",
                 success:function (data) {
                     if(data==""){

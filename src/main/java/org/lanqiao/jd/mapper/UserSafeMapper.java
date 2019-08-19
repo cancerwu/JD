@@ -26,4 +26,6 @@ public interface UserSafeMapper {
 
     int sameTel(String userTel);
     int sameName(String userName);
+
+    int selectUserId(String userName);
 }
