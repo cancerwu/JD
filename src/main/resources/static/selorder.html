@@ -13,51 +13,65 @@
 <script>
     $(function () {
         $.ajax({
-            url: "http://localhost:8080/selectAll/1",
+            url: "http://localhost:8080/getUserId",
             type: "post",
-            dataType: "json",
-            success: function (data) {
-                var f = -1;
-                for (var j = 0; j < data.length; j++) {
-                    var $div3 = ("   <div id=\"con4\">\n" +
-                        "            </div>")
-                    if (f != data[j].order_id) {
-                        f = data[j].order_id;
-                        if (data[j].order_status == 1) {
-                            var $div1 = ("   <div id=\"con5\">\n" +
-                                "                <div class=\"time\">下单时间 :" + data[j].order_time + "</div>\n" +
-                                "                <div class=\"id\">订单号  ：" + data[j].order_id + "</div>\n" +
-                                "                <div class=\"recevice\">" + data[j].receive_name + "</div>\n" +
-                                "                <div class=\"total\">" + data[j].total + "</div>\n" +
-                                "                <div class=\"status\">订单已完成</div>\n" +
+            dataType: "text",
+            success: function (data1) {
+               // alert(data1);
+                var a = data1;
+                 //alert(a);
+                var u = "http://localhost:8080/getAllU/" + String(a);
+                alert(u);
+                $.ajax({
+                    url: u,
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        var f = -1;
+                        for (var j = 0; j < data.length; j++) {
+                            var $div3 = ("   <div id=\"con4\">\n" +
                                 "            </div>")
-                            $("div[id='con2']").append($div1);
-                        } else {
-                            var $div1 = ("   <div id=\"con5\">\n" +
-                                "                <div class=\"time\">" + data[j].order_time + "</div>\n" +
-                                "                <div class=\"id\">" + data[j].order_id + "</div>\n" +
-                                "                <div class=\"recevice\">" + data[j].receive_name + "</div>\n" +
-                                "                <div class=\"total\">" + data[j].total + "</div>\n" +
-                                "                <div class=\"status\">订单未完成</div>\n" +
-                                "            </div>")
-                            $("div[id='con2']").append($div1);
-                        }
+                            if (f != data[j].order_id) {
+                                f = data[j].order_id;
+                                if (data[j].order_status == 1) {
+                                    var $div1 = ("   <div id=\"con5\">\n" +
+                                        "                <div class=\"time\">下单时间 :" + data[j].order_time + "</div>\n" +
+                                        "                <div class=\"id\">订单号  ：" + data[j].order_id + "</div>\n" +
+                                        "                <div class=\"recevice\">" + data[j].receive_name + "</div>\n" +
+                                        "                <div class=\"total\">" + data[j].total + "</div>\n" +
+                                        "                <div class=\"status\">订单已完成</div>\n" +
+                                        "            </div>")
+                                    $("div[id='con2']").append($div1);
+                                } else {
+                                    var $div1 = ("   <div id=\"con5\">\n" +
+                                        "                <div class=\"time\">" + data[j].order_time + "</div>\n" +
+                                        "                <div class=\"id\">" + data[j].order_id + "</div>\n" +
+                                        "                <div class=\"recevice\">" + data[j].receive_name + "</div>\n" +
+                                        "                <div class=\"total\">" + data[j].total + "</div>\n" +
+                                        "                <div class=\"status\">订单未完成</div>\n" +
+                                        "            </div>")
+                                    $("div[id='con2']").append($div1);
+                                }
 
 
-                        for (var i = 0; i < data.length; i++) {
+                                for (var i = 0; i < data.length; i++) {
 
-                            if (data[j].order_id == data[i].order_id) {
-                                var $div2 = ("   <div id=\"con6\">\n" +
-                                    "                <div class=\"product\">" + data[i].pro_name + "</div>\n" +
-                                    "                <div class=\"num\">x" + data[i].pro_num + "</div>\n" +
-                                    "            </div>")
-                                $("div[id='con2']").append($div2);
+                                    if (data[j].order_id == data[i].order_id) {
+                                        var $div2 = ("   <div id=\"con6\">\n" +
+                                            "                <div class=\"product\">" + data[i].pro_name + "</div>\n" +
+                                            "                <div class=\"num\">x" + data[i].pro_num + "</div>\n" +
+                                            "            </div>")
+                                        $("div[id='con2']").append($div2);
+                                    }
+                                }
                             }
                         }
                     }
-                }
+                })
             }
         })
+
+
     })
 </script>
 <body>

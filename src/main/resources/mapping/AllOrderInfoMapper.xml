@@ -33,6 +33,13 @@
     from orderdetail od , orders o, product p,useraddress a
     where o.order_id = #{order_detail_id,jdbcType=INTEGER} and od.order_id=o.order_id and od.pro_id =p.pro_id and a.receive_id=o.receive_id
     </select>
+    <select id="getAllU" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    o.order_id,  o.user_id, o.total, o.order_time, o.order_status, o.receive_id,p.pro_name,od.pro_price,od.pro_num,od.pro_id,od.order_detail_id,a.receive_name, a.receive_tel,a.postal_code, a.province, a.city, a.district,
+    a.address_name, a.is_default
+    from orderdetail od , orders o, product p,useraddress a
+    where o.user_id= #{order_detail_id,jdbcType=INTEGER} and od.order_id=o.order_id and od.pro_id =p.pro_id and a.receive_id=o.receive_id
+    </select>
     <update id="updataOrders" parameterType="org.lanqiao.jd.entity.Orders" >
         update orders
         <set >

@@ -46,5 +46,11 @@ public class OrdersController {
     public int selectOrdersId() {
         return ordersService.selectNearlyId().getOrder_id();
     }
+    @CrossOrigin
+    @RequestMapping("/getAllU/{user_id}")
+    public List<AllOrdersInfo> getAllU(@PathVariable Integer user_id){
+        return ordersService.getAllU(user_id);
+    }
+
 
 }
