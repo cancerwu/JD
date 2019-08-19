@@ -21,6 +21,6 @@ public class OrdersService {
     AllOrdersInfoMapper allOrdersInfoMapper;
     public List<AllOrdersInfo> selectAll(Integer order_id){return allOrdersInfoMapper.getAll(order_id);}
     public int updataOrders(Orders orders){return allOrdersInfoMapper.updataOrders(orders);}
-
+    public Orders selectNearlyId(){return allOrdersInfoMapper.selectNearlyId();}
 
 }

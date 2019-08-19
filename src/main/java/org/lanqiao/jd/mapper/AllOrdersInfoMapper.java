@@ -13,4 +13,5 @@ import java.util.List;
 public interface AllOrdersInfoMapper {
     public List<AllOrdersInfo> getAll(Integer user_id);
     public int updataOrders(Orders orders);
+    public Orders selectNearlyId();
 }

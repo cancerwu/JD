@@ -54,4 +54,7 @@
         </set>
         where order_id = #{order_id,jdbcType=INTEGER}
     </update>
+    <select id="selectNearlyId" resultType="org.lanqiao.jd.entity.Orders">
+           SELECT order_id FROM orders ORDER BY order_id DESC LIMIT 1
+ </select>
 </mapper>
