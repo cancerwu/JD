@@ -1,9 +1,9 @@
 package org.lanqiao.jd.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.lanqiao.jd.entity.Cartdetail;
-import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface CartdetailMapper {
     int deleteByPrimaryKey(Integer cart_detail_id);
 

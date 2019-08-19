@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.lanqiao.mapper.CartdetailMapper" >
-  <resultMap id="BaseResultMap" type="org.lanqiao.entity.Cartdetail" >
+<mapper namespace="org.lanqiao.jd.mapper.CartdetailMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.jd.entity.Cartdetail" >
     <id column="cart_detail_id" property="cart_detail_id" jdbcType="INTEGER" />
     <result column="cart_id" property="cart_id" jdbcType="INTEGER" />
     <result column="pro_id" property="pro_id" jdbcType="INTEGER" />
@@ -22,7 +22,7 @@
     delete from cartdetail
     where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="org.lanqiao.entity.Cartdetail" >
+  <insert id="insert" parameterType="org.lanqiao.jd.entity.Cartdetail" >
     insert into cartdetail (cart_detail_id, cart_id, pro_id, 
       pro_num, pro_price, add_time
       )
@@ -30,7 +30,7 @@
       #{pro_num,jdbcType=INTEGER}, #{pro_price,jdbcType=DECIMAL}, #{add_time,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="org.lanqiao.entity.Cartdetail" >
+  <insert id="insertSelective" parameterType="org.lanqiao.jd.entity.Cartdetail" >
     insert into cartdetail
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="cart_detail_id != null" >
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.entity.Cartdetail" >
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.jd.entity.Cartdetail" >
     update cartdetail
     <set >
       <if test="cart_id != null" >
@@ -94,7 +94,7 @@
     </set>
     where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.lanqiao.entity.Cartdetail" >
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.jd.entity.Cartdetail" >
     update cartdetail
     set cart_id = #{cart_id,jdbcType=INTEGER},
       pro_id = #{pro_id,jdbcType=INTEGER},
