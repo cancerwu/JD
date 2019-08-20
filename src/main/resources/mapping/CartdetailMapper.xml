@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.jd.mapper.CartdetailMapper" >
+  <resultMap id="BaseResultMap" type="org.lanqiao.jd.entity.Cartdetail" >
+    <id column="cart_detail_id" property="cart_detail_id" jdbcType="INTEGER" />
+    <result column="cart_id" property="cart_id" jdbcType="INTEGER" />
+    <result column="pro_id" property="pro_id" jdbcType="INTEGER" />
+    <result column="pro_num" property="pro_num" jdbcType="INTEGER" />
+    <result column="pro_price" property="pro_price" jdbcType="DECIMAL" />
+    <result column="add_time" property="add_time" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cart_detail_id, cart_id, pro_id, pro_num, pro_price, add_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cartdetail
+    where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cartdetail
+    where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.lanqiao.jd.entity.Cartdetail" >
+    insert into cartdetail (cart_detail_id, cart_id, pro_id, 
+      pro_num, pro_price, add_time
+      )
+    values (#{cart_detail_id,jdbcType=INTEGER}, #{cart_id,jdbcType=INTEGER}, #{pro_id,jdbcType=INTEGER}, 
+      #{pro_num,jdbcType=INTEGER}, #{pro_price,jdbcType=DECIMAL}, #{add_time,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.lanqiao.jd.entity.Cartdetail" >
+    insert into cartdetail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cart_detail_id != null" >
+        cart_detail_id,
+      </if>
+      <if test="cart_id != null" >
+        cart_id,
+      </if>
+      <if test="pro_id != null" >
+        pro_id,
+      </if>
+      <if test="pro_num != null" >
+        pro_num,
+      </if>
+      <if test="pro_price != null" >
+        pro_price,
+      </if>
+      <if test="add_time != null" >
+        add_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cart_detail_id != null" >
+        #{cart_detail_id,jdbcType=INTEGER},
+      </if>
+      <if test="cart_id != null" >
+        #{cart_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_id != null" >
+        #{pro_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_num != null" >
+        #{pro_num,jdbcType=INTEGER},
+      </if>
+      <if test="pro_price != null" >
+        #{pro_price,jdbcType=DECIMAL},
+      </if>
+      <if test="add_time != null" >
+        #{add_time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.lanqiao.jd.entity.Cartdetail" >
+    update cartdetail
+    <set >
+      <if test="cart_id != null" >
+        cart_id = #{cart_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_id != null" >
+        pro_id = #{pro_id,jdbcType=INTEGER},
+      </if>
+      <if test="pro_num != null" >
+        pro_num = #{pro_num,jdbcType=INTEGER},
+      </if>
+      <if test="pro_price != null" >
+        pro_price = #{pro_price,jdbcType=DECIMAL},
+      </if>
+      <if test="add_time != null" >
+        add_time = #{add_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.lanqiao.jd.entity.Cartdetail" >
+    update cartdetail
+    set cart_id = #{cart_id,jdbcType=INTEGER},
+      pro_id = #{pro_id,jdbcType=INTEGER},
+      pro_num = #{pro_num,jdbcType=INTEGER},
+      pro_price = #{pro_price,jdbcType=DECIMAL},
+      add_time = #{add_time,jdbcType=TIMESTAMP}
+    where cart_detail_id = #{cart_detail_id,jdbcType=INTEGER}
+  </update>
+</mapper>

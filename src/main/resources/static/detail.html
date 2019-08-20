@@ -104,11 +104,8 @@
                 </div>
                 
             </div>
-            <div id="pro_buy">
-                <a href="#">立即购买</a>
-            </div>
             <div id="pro_cart">
-                <a href="#">加入购物车</a>
+                <a href="#" id="insertCart">加入购物车</a>
             </div>
         </div>
     </div>
@@ -222,19 +219,50 @@
                 $("#float_top").fadeOut(500);
             }
         })
-        var pro_id = 2;
+        var cartIn = {
+            cart_detail_id:null,
+            cart_id:null,
+            pro_id:null,
+            pro_num:1,
+        }
+        var pro_id=1;
         $.ajax({
             url:"http://localhost:8080/getPro",
             type:"post",
-            data:{'pro_id':pro_id},
             dataType:"json",
+            data:{'pro_id':pro_id},
             success:function (data) {
                 console.log(data);
                 $('#pro_desc').text(data.pro_describe);
                 $('#pro_price').text(data.pro_price+"元");
                 $('#pro_count').text(data.pro_count+"件");
                 $('#imgBox_1').attr('src', data.pro_img);
+                cartIn.pro_id=data.pro_id;
             }
+        })
+        $.ajax({
+            url:"http://localhost:8080/getUserId",
+            type:"post",
+            dataType:"text",
+            success:function (data) {
+                cartIn.cart_id=data;
+                cartIn.cart_detail_id=cartIn.cart_id;
+            }
+        })
+        $("#insertCart").click(function () {
+            $.ajax({
+                url:"http://localhost:8080/insertCart",
+                type:"post",
+                dataType:"text",
+                data:{'cart_detail_id':cartIn.cart_detail_id,
+                    'cart_id':cartIn.cart_id,
+                    'pro_id':cartIn.pro_id,
+                    'pro_num':cartIn.pro_num,
+                },
+                success:function (data) {
+                    alert("已成功加入购物车！");
+                }
+            })
         })
     })
 </script>
