@@ -1,0 +1,512 @@
+/* 这是京东页面头部和底部的样式,因为京东其他页面和京东主页头部和底部基本相同 
+所有可以引用同一个样式表base.css*/
+/* 版心的公共类 */
+blockquote, body, button, dd, dl, dt, fieldset, form, h2, h3, h4, h5, h6,
+hr, input, legend, li, ol, p, pre, td, textarea, h1, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1190px; /* 版心宽度为1190px */
+    margin: 0 auto; /* 居中对齐 */
+}
+
+a {
+    text-decoration: none; /* 取消链接下划线 */
+    color: #999999; /* 链接本身颜色灰色 */
+}
+
+a:hover {
+    color: #c81623; /* 鼠标经过链接时变颜色 */
+}
+
+.col-f10 {
+    color: #f10215; /*有些链接的固定颜色 */
+}
+
+body {
+    background-color: #f4f4f4; /* 主体背景颜色部分 */
+    overflow: scroll;
+    position: relative;
+}
+
+/* 浮动公共类 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* header部分 */
+.adv {
+    height: 80px;
+    background-color: #df5987;
+    position: relative;
+}
+
+.adv a {
+    display: block;
+    height: 80px;
+    background: url(../img/header.jpg) no-repeat;
+}
+
+.close {
+    font-family: "icomoon";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 170px;
+    z-index: 1;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* header部分结束*/
+/* 快速导航栏部分 */
+.shortcut {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #dededf;
+    font-size: 12px;
+}
+
+@font-face {
+    /* 声明字体样式 */
+    font-family: 'icomoon';
+    src: url('../../fonts/icomoon.eot?5n556x');
+    src: url('../../fonts/icomoon.eot?5n556x#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?5n556x') format('truetype'),
+    url('../../fonts/icomoon.woff?5n556x') format('woff'),
+    url('../../fonts/icomoon.svg?5n556x#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+.city {
+    color: #999;
+    margin-left: 210px;
+}
+
+.shortcut i {
+    font-family: "icomoon"; /* 引用字体图标的样式 */
+    font-size: 12px;
+    line-height: 30px;
+    font-style: normal;
+}
+
+.short-r {
+    width: 720px;
+}
+
+#login {
+    display: inline-block;
+    white-space:nowrap;
+    width: 60px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.short-r a:hover {
+    color: #E33333;
+}
+
+.short-r li {
+    float: left;
+}
+
+.space { /* 导航栏小竖线样式 */
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 10px 14px;
+}
+
+.mobilejd {
+    position: relative;
+    margin-left: 5px;
+}
+
+.mobilejd img {
+    position: absolute;
+    top: 24px;
+    left: -10px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(144, 144, 144, 0.4)
+}
+
+/* 快速导航栏部分结束 */
+/* 中间头部分开始 */
+#header {
+    height: 140px;
+    /* background-color: pink; */
+    position: relative;
+}
+
+.logo a {
+    width: 190px;
+    height: 170px;
+    display: block;
+    background: url(../img/logo_03.jpg) no-repeat;
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.search {
+    width: 550px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    left: 320px;
+}
+
+.search input[type=search] {
+    width: 500px;
+    height: 35px;
+    outline: none; /* 取消轮廓边框 */
+    padding: 4px 44px 4px 4px;
+    border: 0;
+    float: left;
+    font-size: 14px;
+}
+
+.search button {
+    width: 50px;
+    height: 35px;
+    border: 0;
+    background-color: #F10215;
+    outline: none;
+}
+
+.search button i {
+    font-family: "icomoon";
+    font-style: normal;
+    color: #fff;
+}
+
+.shoppingcar {
+    width: 188px;
+    height: 33px;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    text-align: center;
+    line-height: 33px;
+    border: 1px solid #e3e4e5;
+    background-color: #fff;
+}
+
+.shoppingcar a, .shoppingcar i {
+    font-family: "icomoon";
+    font-style: normal;
+    color: #F10215;
+    font-size: 12px;
+}
+
+.shoppingcar i {
+    font-size: 16px;
+}
+
+.shoppingcar span {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    width: 15px;
+    height: 15px;
+    background-color: #F10215;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+}
+
+.keywords {
+    font-size: 12px;
+    position: absolute;
+    top: 70px;
+    left: 320px;
+}
+
+.keywords a {
+    margin-left: 1px;
+    margin-right: 8px;
+}
+
+.keywords a:hover {
+    color: #C81623;
+}
+
+.navitems {
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.navitems li {
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+.navitems li:nth-child(1) a,
+.navitems li:nth-child(2) a {
+    color: #e1215b;
+    font-weight: bold;
+}
+
+.navitems li a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.navitems li a:hover {
+    color: #c81623;
+}
+
+.navitems .space {
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 15px -15px 15px 15px;
+}
+
+.super {
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    width: 190px;
+    height: 40px;
+    background: url(../img/header.jpg) no-repeat;
+    background-position: -805px -5px;
+    border-radius: 10px;
+}
+
+.super a {
+    display: block;
+    width: 190px;
+    height: 40px;
+}
+
+/* 中间头部分结束 */
+/* 页面主体部分开始 */
+
+/* 页面主体部分结束 */
+/* 页面底部部分开始 */
+footer {
+    height: 530px;
+}
+
+.service {
+    background-color: #F0F3EF;
+    border-bottom: 1px solid #e5e6e5;
+    padding: 30px 0;
+    overflow: hidden;
+    /* 清除浮动的一种方法 */
+}
+
+.service li {
+    float: left;
+    width: 297px;
+    line-height: 42px;
+    position: relative;
+}
+
+.service li h5 {
+    position: absolute;
+    left: 38px;
+    width: 37px;
+    height: 43px;
+    text-indent: -1999px; /* 让多快好省四个字在页面看不见 */
+}
+
+.service li:nth-child(1) h5 {
+    background: url(../img/sprite.footer.png);
+    background-position: 0 -191px;
+}
+
+.service li:nth-child(2) h5 {
+    background: url(../img/sprite.footer.png);
+    background-position: -40px -191px;
+}
+
+.service li:nth-child(3) h5 {
+    background: url(../img/sprite.footer.png);
+    background-position: -82px -191px;
+}
+
+.service li:nth-child(4) h5 {
+    background: url(../img/sprite.footer.png);
+    background-position: -123px -191px;
+}
+
+.service li p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+    margin-left: 82px;
+}
+.help {
+    height: 200px;
+    border-bottom: 1px solid #e5e6e5;
+    margin-bottom: 20px;
+}
+
+.help-l dl {
+    float: left;
+    width: 192px;
+    margin-top: 25px;
+    color: #666;
+}
+
+.help-l dl dt {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.help-l dl dd {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+.help-r {
+    float: right;
+    width: 200px;
+    height: 150px;
+    color: #666;
+    background: url(../img/sprite.footer.png) no-repeat; /* 这里添加一张中国地图 */
+    background-position: 0 0; /* 中国地图在精灵图中的位置 */
+}
+
+.help-r h5 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.help-r p {
+    width: 180px;
+    font-size: 12px;
+    text-indent: 2em;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.help-r a {
+    font-size: 12px;
+    float: right;
+    margin-right: 20px;
+}
+
+.infor p a {
+    color: #666;
+    font-size: 12px;
+}
+
+.infor p a:hover {
+    color: #F10215;
+}
+
+.infor p span, .copyright p span { /* 定义底部小竖线样式 */
+    color: #666;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.copyright {
+    margin-top: 10px;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    line-height: 22px;
+}
+
+.copyright .site i {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+.copyright .site a:nth-child(1) i {
+    background: url(../img/sprite.footer.png);
+    background-position: -108px -155px;
+}
+
+.copyright .site a:nth-child(2) i {
+    background: url(../img/sprite.footer.png);
+    background-position: -168px -154px;
+}
+
+.copyright .site a:nth-child(3) i {
+    background: url(../img/sprite.footer.png);
+    background-position: -148px -154px;
+}
+
+.copyright .site a:nth-child(4) i {
+    background: url(../img/sprite.footer.png);
+    background-position: -128px -154px;
+}
+
+.copyright .site a:last-child i {
+    background: url(../img/sprite.footer.png);
+    background-position: -108px -170px;
+}
+
+.foot-icon a {
+    display: inline-block;
+    width: 103px;
+    height: 32px;
+    margin: 40px 3px 25px;
+}
+
+.foot-icon a:nth-child(1) {
+    background: url(../img/sprite.footer.png);
+    background-position: -205px 0;
+}
+
+.foot-icon a:nth-child(2) {
+    background: url(../img/sprite.footer.png);
+    background-position: -205px -37px;
+}
+
+.foot-icon a:nth-child(3) {
+    background: url(../img/sprite.footer.png);
+    background-position: -205px -74px;
+}
+
+.foot-icon a:nth-child(4) {
+    background: url(../img/sprite.footer.png);
+    background-position: -205px -110px;
+}
+
+.foot-icon a:nth-child(5) {
+    background: url(../img/sprite.footer.png);
+    background-position: -205px -147px;
+}
+
+/* 页面底部部分结束 */
