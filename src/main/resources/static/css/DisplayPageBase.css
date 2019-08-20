@@ -1,0 +1,10 @@
+body,div,ul,li,a,b,span,i,input,h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    float: left;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+
+    color: black;
+}

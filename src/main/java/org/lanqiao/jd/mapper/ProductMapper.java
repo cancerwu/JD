@@ -4,6 +4,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.lanqiao.jd.entity.Product;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+
 @Mapper
 public interface ProductMapper {
     int deleteByPrimaryKey(Integer pro_id);
@@ -17,4 +20,6 @@ public interface ProductMapper {
     int updateByPrimaryKeySelective(Product record);
 
     int updateByPrimaryKey(Product record);
+
+    List<Product> selectAllProductKBE();
 }

@@ -1,6 +1,7 @@
 package org.lanqiao.jd.entity;
 
 import java.util.Date;
+import java.util.Set;
 
 public class Product {
     private Integer pro_id;
@@ -26,6 +27,15 @@ public class Product {
     private Integer brand_id;
 
     private String pro_img;
+
+    /**************************************************************/
+    private Brand brand;
+
+    private Kind kind;
+
+    private Set<Evaluate> evaluateSet;
+
+    /**************************************************************/
 
     public Integer getPro_id() {
         return pro_id;
@@ -123,6 +133,30 @@ public class Product {
         this.pro_img = pro_img == null ? null : pro_img.trim();
     }
 
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
+    }
+
+    public Kind getKind() {
+        return kind;
+    }
+
+    public void setKind(Kind kind) {
+        this.kind = kind;
+    }
+
+    public Set<Evaluate> getEvaluateSet() {
+        return evaluateSet;
+    }
+
+    public void setEvaluateSet(Set<Evaluate> evaluateSet) {
+        this.evaluateSet = evaluateSet;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -138,6 +172,9 @@ public class Product {
                 ", kind_id=" + kind_id +
                 ", brand_id=" + brand_id +
                 ", pro_img='" + pro_img + '\'' +
+                ", brand=" + brand +
+                ", kind=" + kind +
+                ", evaluateSet=" + evaluateSet +
                 '}';
     }
 }

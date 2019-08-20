@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lanqiao.jd.mapper.BrandMapper" >
+  <resultMap id="BrandResultMap" type="org.lanqiao.jd.entity.Brand" >
+    <id column="brand_id" property="brand_id" jdbcType="INTEGER" />
+    <result column="brand_name" property="brand_name" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="BrandResultMapWithBLOBs" type="org.lanqiao.jd.entity.Brand" extends="BrandResultMap" >
+    <result column="brand_img" property="brand_img" jdbcType="LONGVARBINARY" />
+  </resultMap>
+
+
+
+  <resultMap id="BrandProductResultMap" type="org.lanqiao.jd.entity.Brand" >
+    <id column="brand_id" property="brand_id" jdbcType="INTEGER" />
+    <result column="brand_name" property="brand_name" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="BrandProductResultMapWithBLOBs" type="org.lanqiao.jd.entity.Brand" extends="BrandProductResultMap" >
+    <result column="brand_img" property="brand_img" jdbcType="LONGVARBINARY" />
+    <collection property="productSet" resultMap="ProductResultMap" />
+  </resultMap>
+
+  <resultMap id="ProductResultMap" type="org.lanqiao.jd.entity.Product" >
+    <id column="pro_id" property="pro_id" jdbcType="INTEGER" />
+    <result column="pro_name" property="pro_name" jdbcType="VARCHAR" />
+    <result column="pro_weight" property="pro_weight" jdbcType="DOUBLE" />
+    <result column="pro_color" property="pro_color" jdbcType="VARCHAR" />
+    <result column="pro_issued_date" property="pro_issued_date" jdbcType="TIMESTAMP" />
+    <result column="pro_price" property="pro_price" jdbcType="DECIMAL" />
+    <result column="pro_producted_date" property="pro_producted_date" jdbcType="TIMESTAMP" />
+    <result column="pro_describe" property="pro_describe" jdbcType="VARCHAR" />
+    <result column="pro_count" property="pro_count" jdbcType="INTEGER" />
+    <result column="kind_id" property="kind_id" jdbcType="INTEGER" />
+    <result column="brand_id" property="brand_id" jdbcType="INTEGER" />
+    <result column="pro_img" property="pro_img" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    brand_id, brand_name
+  </sql>
+  <sql id="Blob_Column_List" >
+    brand_img
+  </sql>
+
+  <select id="select_Brand_Product" resultMap="BrandProductResultMapWithBLOBs" parameterType="java.lang.Integer">
+    select b.*,p.* from brand b,product p where b.brand_id = p.brand_id and b.brand_id = #{brand_id}
+  </select>
+  <select id="selectAllBrand" resultType="org.lanqiao.jd.entity.Brand">
+    select * from brand
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <select id="selectByPrimaryKeyBrand" resultMap="BrandResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from brand
+    where brand_id = #{brand_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKeyBrand" parameterType="java.lang.Integer" >
+    delete from brand
+    where brand_id = #{brand_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertBrand" parameterType="org.lanqiao.jd.entity.Brand" >
+    insert into brand (brand_id, brand_name, brand_img
+      )
+    values (#{brand_id,jdbcType=INTEGER}, #{brand_name,jdbcType=VARCHAR}, #{brand_img,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <insert id="insertSelectiveBrand" parameterType="org.lanqiao.jd.entity.Brand" >
+    insert into brand
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="brand_id != null" >
+        brand_id,
+      </if>
+      <if test="brand_name != null" >
+        brand_name,
+      </if>
+      <if test="brand_img != null" >
+        brand_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="brand_id != null" >
+        #{brand_id,jdbcType=INTEGER},
+      </if>
+      <if test="brand_name != null" >
+        #{brand_name,jdbcType=VARCHAR},
+      </if>
+      <if test="brand_img != null" >
+        #{brand_img,jdbcType=LONGVARBINARY},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelectiveBrand" parameterType="org.lanqiao.jd.entity.Brand" >
+    update brand
+    <set >
+      <if test="brand_name != null" >
+        brand_name = #{brand_name,jdbcType=VARCHAR},
+      </if>
+      <if test="brand_img != null" >
+        brand_img = #{brand_img,jdbcType=LONGVARBINARY},
+      </if>
+    </set>
+    where brand_id = #{brand_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBsBrand" parameterType="org.lanqiao.jd.entity.Brand" >
+    update brand
+    set brand_name = #{brand_name,jdbcType=VARCHAR},
+      brand_img = #{brand_img,jdbcType=LONGVARBINARY}
+    where brand_id = #{brand_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyBrand" parameterType="org.lanqiao.jd.entity.Brand" >
+    update brand
+    set brand_name = #{brand_name,jdbcType=VARCHAR}
+    where brand_id = #{brand_id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/DisplayPage.css" rel="stylesheet">
+    <link href="css/DisplayPageBase.css" rel="stylesheet">
+</head>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.js"></script>
+<body>
+
+<!-------------------------------------------------top1----------------------------------------------->
+<!----------------------------------------------------------------------------------------------------->
+
+<div id="top1">
+    <div id="top11">
+        <ul>
+            <li><i>*</i><a>京东首页</a></li>
+            <li class="li_right_shuxian"></li>
+            <li><i>*</i><a>福建</a></li>
+
+            <li class="li_right_logo"><a>请登录</a><a>免费注册</a></li>
+
+            <li class="li_right_shuxian"></li>
+
+            <li class="li_right_putong"><a>我的订单</a></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_meun"><a>我的京东</a><i>*</i></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_putong"><a>我的会员</a></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_meun"><a>企业采购</a><i>*</i></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_meun"><a>客户服务</a><i>*</i></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_meun"><a>网站导航</a><i>*</i></li>
+            <li class="li_right_shuxian"></li>
+            <li class="li_right_putong"><a>手机京东</a></li>
+        </ul>
+    </div>
+</div>
+<!-------------------------------------------------top1------------------------------------------------>
+<!----------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------top2------------------------------------------------>
+
+
+<div id="top2">
+    <div id="top21">
+        <div id="JDshangbiao">
+
+        </div>
+
+    </div>
+    <div id="top22">
+        <input>
+        <i>搜索</i>
+    </div>
+    <div id="top23">
+        <a href="cart.html">我的购物车</a>
+        <i class="i1"></i>
+        <i class="i2"></i>
+    </div>
+    <div id="top24">
+        <a>机械硬盘</a>
+        <b>|</b>
+        <a>鼠标</a>
+        <b>|</b>
+        <a>键盘</a>
+        <b>|</b>
+        <a>机械键盘自营</a>
+        <b>|</b>
+        <a>机械键盘87键</a>
+        <b>|</b>
+        <a>樱桃机械键盘</a>
+        <b>|</b>
+        <a>无线机械键盘</a>
+        <b>|</b>
+    </div>
+</div>
+<!-------------------------------------------------top2------------------------------------------------>
+<!----------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------top3------------------------------------------------>
+<div id="top3">
+    <div id="top3div">
+        <a>全部商品分类</a>
+    </div>
+    <a class="atype">京东时尚</a>
+    <a class="atype">美妆馆</a>
+    <a class="atype">超市</a>
+    <a class="atype">生鲜</a>
+    <a class="atype">海囤全球</a>
+    <a class="atype">闪购</a>
+    <a class="atype">拍卖</a>
+    <a class="atype">金融</a>
+</div>
+<!-------------------------------------------------top3------------------------------------------------>
+<!----------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------subject--------------------------------------------->
+<div id="subject">
+    <div id="subject_head">
+        <span>全部结果</span>
+        <i>&gt;</i>
+        <strong>"机械键盘"</strong>
+    </div>
+    <div id="subject_meun">
+        <div class="shell">
+            <div class="list1"><strong>品牌</strong></div>
+            <div class="list2">
+                <ul id="vue_brandname">
+                    <a class="aElem1" v-for="(brand,index) in brands">{{brand.name}}</a>
+<!--                    <a class="aElem1">品牌</a>-->
+                </ul>
+            </div>
+        </div>
+        <div class="shell">
+            <div class="list1"><strong>外设产品：</strong></div>
+            <div class="list2">
+                <ul>
+                    <a class="aElem2">键盘</a>
+                    <a class="aElem2">鼠标</a>
+                    <a class="aElem2">游戏设备</a>
+                    <a class="aElem2">电脑清洗</a>
+                    <a class="aElem2">鼠标垫</a>
+                    <a class="aElem2">移动硬盘</a>
+                    <a class="aElem2">电脑工具</a>
+                </ul>
+            </div>
+        </div>
+        <div class="shell">
+            <div class="list1"><span>类型：</span></div>
+            <div class="list2">
+
+                <ul id="vue_kindname">
+                    <li name="kindtype" class="aElem2" v-for="(kind,index) in kinds">{{kind.name}}</li>
+<!--                    <a class="aElem2">键鼠套装</a>-->
+                </ul>
+            </div>
+        </div>
+        <div class="shell">
+            <div class="list1"><span>连接方式：</span></div>
+            <div class="list2">
+                <ul>
+                    <a class="aElem2">无线</a>
+                    <a class="aElem2">多模</a>
+                    <a class="aElem2">有线</a>
+                    <a class="aElem2">蓝牙</a>
+                </ul>
+            </div>
+        </div>
+        <div class="shell">
+            <div class="list1"><span>高级选项：</span></div>
+            <div class="list2">
+                <ul>
+                    <a class="aElem2 aElem21"><span>&nbsp;&nbsp;轴体类型&nbsp;</span><i>…</i></a>
+                    <a class="aElem2 aElem21"><span>&nbsp;&nbsp;数字键盘&nbsp;</span><i>…</i></a>
+                    <a class="aElem2 aElem21"><span>&nbsp;&nbsp;轴体品牌&nbsp;</span><i>…</i></a>
+                    <a class="aElem2 aElem21"><span>&nbsp;&nbsp;其他分类&nbsp;</span><i>…</i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="subject_window">
+        <div id="subject_window_leftlist">
+            <h3>商品精选</h3>
+            <ul>
+                <li>
+                    <a>
+                        <img src="images/hudie.jpg" class="subject_window_leftlist_li_img">
+                        <span class="subject_window_leftlist_li_price">￥1000</span>
+                        <p class="subject_window_leftlist_li_describe">对接口发动机看到副科级对接口发动机看到副科级</p>
+                        <p class="subject_window_leftlist_li_evaluate">对接口发动机看到副科级对接口发动机看到副科级对接口发动机看到副科级</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="subject_window_head">
+            <div class="divhead">
+                <a class="subject_window_head_divhead_a">
+                    <span class="subject_window_head_divhead_a_span">综合</span>
+                    <i class="subject_window_head_divhead_a_i"></i>
+                </a>
+                <a class="subject_window_head_divhead_a">
+                    <span class="subject_window_head_divhead_a_span">销量</span>
+                    <i class="subject_window_head_divhead_a_i"></i>
+                </a>
+                <a class="subject_window_head_divhead_a">
+                    <span class="subject_window_head_divhead_a_span">评价数</span>
+                    <i class="subject_window_head_divhead_a_i"></i>
+                </a>
+                <a class="subject_window_head_divhead_a">
+                    <span class="subject_window_head_divhead_a_span">新品</span>
+                    <i class="subject_window_head_divhead_a_i"></i>
+                </a>
+                <a class="subject_window_head_divhead_a">
+                    <span class="subject_window_head_divhead_a_span">价格</span>
+                    <i class="subject_window_head_divhead_a_i"></i>
+                </a>
+            </div>
+            <div class="divhead">
+
+            </div>
+        </div>
+        <div id="subject_window_meun">
+            <div class="subject_window_meun_merchandise" v-for="(product,index) in products">
+                <div class="subject_window_meun_merchandise_a">
+                    <a class="subject_window_meun_merchandise_a_imga"  href="detail.html">
+                        <img src="images/item1.png" class="subject_window_meun_merchandise_a_img">
+                    </a>
+                    <span class="subject_window_meun_merchandise_a_proid">{{product.proid}}</span>
+                    <span class="subject_window_meun_merchandise_a_price">￥{{product.pri}}</span>
+                    <p class="subject_window_meun_merchandise_a_describe">{{product.des}}</p>
+                    <span class="subject_window_meun_merchandise_a_evaluateCount">评论：{{product.eva}}+</span>
+                    <span class="subject_window_meun_merchandise_a_brand">品牌:{{product.brand}}</span>
+                    <span class="subject_window_meun_merchandise_a_shop">商品:{{product.name}}</span>
+                    <span class="subject_window_meun_merchandise_a_kind">种类:{{product.kind}}</span>
+                    <div class="subject_window_meun_merchandise_a_optate">
+                        <button class="subject_window_meun_merchandise_a_optate_button1" name="立即购买">立即购买</button>
+                        <button class="subject_window_meun_merchandise_a_optate_button2" name="加入购物车">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script>
+    var vuebrandname = new Vue({
+        el:"#vue_brandname",
+        data:{
+            newbrand:{
+                name:""
+            },
+            brands:[{
+                name:"京东商城"
+            },{
+                name:"淘宝商城"
+            },{
+                name:"天猫商城"
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },{
+                name:""
+            },],
+        }
+    });
+    var vuekindname = new Vue({
+        el:"#vue_kindname",
+        data:{
+            kinds:[],
+        }
+    });
+    var vueproduct = new Vue({
+        el:"#subject_window_meun",
+        data:{
+            products:[],
+        }
+    });
+    $(function () {
+        $.ajax({
+            url:"http://localhost:8080/getallbrand",
+            type:"post",
+            // data:{"pageNum":pageNum,"pageSize":pageSize},
+            dataType:"json",
+            success:function (data) {
+                var $elem=$("#vue_brandname").children();
+                var min =$elem.length < data.length ? $elem.length : data.length;
+                for(var i=0;i<min;i++){
+                    vuebrandname.brands[i].name = data[i].brand_name;
+                }
+            }
+        });
+        $.ajax({
+            url:"http://localhost:8080/getallkind",
+            type:"post",
+            // data:{"pageNum":pageNum,"pageSize":pageSize},
+            dataType:"json",
+            success:function (data) {
+                for(var i=0;i<data.length;i++){
+                    vuekindname.kinds.push({name:data[i].kind_name});
+                }
+            }
+        });
+        $.ajax({
+            // url:"http://localhost:8080/getallproduct",
+            url:"http://localhost:8080/selectgetproductkbe",
+            type:"post",
+            // data:{"pageNum":pageNum,"pageSize":pageSize},
+            dataType:"json",
+            success:function (data) {
+                for(var i=0;i<data.length;i++){
+                    vueproduct.products.push({pri : data[i].pro_price , des : data[i].pro_describ,name:data[i].pro_name,eva:data[i].evaluateSet.length,brand:data[i].brand.brand_name,kind:data[i].kind.kind_name,proid:data[i].pro_id});
+                }
+            }
+        });
+        $("#vue_kindname").on("click",".aElem2",function () {
+            var t="种类:"+$(this).text();
+            var arry = $("#subject_window_meun").children();
+            for(var i = 0 ;i<arry.length;i++){
+                arry.eq(i).show();
+            }
+            for(var i = 0 ;i<arry.length;i++){
+                if(arry.eq(i).find(".subject_window_meun_merchandise_a_kind").text()!=t){
+                    arry.eq(i).hide();
+                }
+            }
+        });
+        $("#vue_brandname").on('click','.aElem1',function () {
+            var t="品牌:"+$(this).text();
+            var arry = $("#subject_window_meun").children();
+            for(var i = 0 ;i<arry.length;i++){
+                arry.eq(i).show();
+            }
+            for(var i = 0 ;i<arry.length;i++){
+                if(arry.eq(i).find(".subject_window_meun_merchandise_a_brand").text()!=t){
+                    arry.eq(i).hide();
+                }
+            }
+        });
+        $("#subject_head span").click(function () {
+            var arry = $("#subject_window_meun").children();
+            for(var i = 0 ;i<arry.length;i++){
+                arry.eq(i).show();
+            }
+        });
+
+
+        $("#subject_window_meun").on("click",".subject_window_meun_merchandise_a_aimg",function () {
+            $.post("http://localhost:8080/getPro",{
+                pro_id:parseInt($(this).next().text()),
+            });
+        });
+        $("#subject_window_meun").on("click",".subject_window_meun_merchandise_a_optate_button1",function () {
+            var arry = $(this).parent().children();
+            $.post("http://localhost:8080/",{
+                pro_id:parseInt(arry.eq(1).text()),
+            });
+        });
+        $("#subject_window_meun").on("click",".subject_window_meun_merchandise_a_optate_button2",function () {
+            var arry = $(this).parent().children();
+            $.post("http://localhost:8080/",{
+                pro_id:parseInt(arry.eq(1).text()),
+            });
+        });
+
+
+
+    })
+</script>
+</html>

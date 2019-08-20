@@ -1,0 +1,489 @@
+/*-----------------------------------------------------top1--------------------------------------------------*/
+#top1{
+    width: 1260px;
+    height: 30px;
+    /*background-color: blue;*/
+}
+#top11{
+    width: 1210px;
+    height: 30px;
+    margin: 0px 25px;
+}
+#top11 ul{
+    width: 1210px;
+    height: 30px;
+}
+#top11 li{
+    width: 70px;
+    height: 15px;
+    padding: 7.5px 0px;
+
+    list-style: none;
+    line-height: 30px;
+    text-align: center;
+
+    margin-right: 5px;
+}
+#top11 li a{
+    width: 48px;
+    height: 15px;
+    line-height: 15px;
+    /*background-color: red;*/
+}
+#top11 li i{
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: black;
+}
+#top11 .li_right_putong{
+
+}
+#top11 .li_right_logo{
+    width: 180px;
+    margin-left: 200px;
+}
+#top11 .li_right_meun{
+
+    width: 80px;
+}
+#top11 .li_right_shuxian{
+
+    width: 2px;
+    height: 15px;
+    padding: 0px;
+    margin: 7.5px 5px;
+    /*background-color: darkgrey;*/
+}
+/*-----------------------------------------------------top1--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------top2--------------------------------------------------*/
+
+#top2{
+    width: 1210px;
+    height: 90px;
+    margin: 0px 25px;
+    /*background-color: chocolate;*/
+}
+#top21{
+    width: 280px;
+    height: 90px;
+
+}
+#JDshangbiao{
+    width: 280px;
+    height: 82px;
+    margin: 8px 0px 0px;
+    background-image: url("../images/JD1.png");
+}
+#top22{
+    width: 540px;
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+#top22 input{
+    width: 420px;
+    height: 30px;
+    border-width: 0px;
+    padding: 5px 40px 5px 0px;
+}
+#top22 i{
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-width: 0px;
+    background-color: red;
+}
+
+#top23{
+    width: 90px;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 0px 20px 0px 30px;
+}
+#top23 a{
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: red;
+}
+#top23 i{
+    width: 15px;
+    height: 40px;
+}
+#top23 .i1{
+    color: red;
+    font-size: 16px;
+    line-height: 16px;
+}
+#top23 .i2{
+    background-color: red;
+    color: white;
+}
+#top24{
+    width: 540px;
+    height: 20px;
+    padding-left: 100px;
+}
+#top24 a{
+    height: 20px;
+    text-align: center;
+}
+#top24 b{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+/*-----------------------------------------------------top2--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------top3--------------------------------------------------*/
+#top3{
+    width: 1210px;
+    height: 33px;
+    padding: 0px 25px;
+    /*background-color: blue;*/
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-bottom-color: red;
+    margin-top: 10px;
+}
+#top3div{
+    width: 170px;
+    height: 33px;
+    padding: 0px 10px;
+    background-color: red;
+}
+#top3div a{
+    width: 170px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    background-color: red;
+    font-size: 14px;
+    color: white;
+}
+#top3 .atype{
+    height: 33px;
+    padding: 0px 20px;
+    line-height: 33px;
+    text-align: center;
+}
+
+
+/*-----------------------------------------------------top3--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------subject-----------------------------------------------*/
+#subject{
+    width: 1210px;
+    /*height: 7760px;*/
+    margin: 0px 25px 30px;
+    /*background-color: chocolate;*/
+}
+#subject_head{
+    width: 1210px;
+    height: 30px;
+    padding: 15px 0px 5px;
+    /*background-color: darkgrey;*/
+}
+#subject_head span{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
+#subject_head i{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px 5px;
+}
+#subject_head strong{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+#subject_meun{
+    width: 1210px;
+}
+#subject_meun .shell{
+    width: 1210px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+}
+#subject_meun .list1{
+    width: 110px;
+    margin: 2px 0px 3px;
+    /*background-color: blue;*/
+}
+#subject_meun .list2{
+    width: 1000px;
+    padding-left: 10px;
+    margin: 2px 0px 3px;
+    /*background-color: crimson;*/
+}
+#subject_meun .list2 ul{
+    width: 960px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+}
+#subject_meun .list2 ul .aElem1{
+    width: 112px;
+    height: 42px;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: aqua;
+    line-height: 42px;
+    text-align: center;
+    color: red;
+}
+#subject_meun .list2 ul .aElem2{
+    width: 130px;
+    height: 26px;
+    margin: 2px;
+    list-style: none;
+    line-height: 26px;
+    text-align: center;
+    color: blue;
+}
+#subject_meun .list2 #vue_kindname li{
+    color: red;
+}
+#subject_meun .list2 ul .aElem21{
+    border-style: dashed;
+    border-color: darkgrey;
+    border-width: 1px;
+}
+
+
+
+
+#subject_window{
+    width: 1210px;
+    margin-top: 10px;
+}
+#subject_window_leftlist{
+    width: 180px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+
+}
+#subject_window_leftlist h3{
+    width: 180px;
+    height: 30px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px;
+    padding: 5px 0px;
+    line-height: 30px;
+    text-align: center;
+
+}
+#subject_window_leftlist ul{
+    width: 170px;
+    margin: 0px 5px;
+
+}
+#subject_window_leftlist li{
+    width: 170px;
+    margin: 10px 0px;
+    list-style: none;
+}
+#subject_window_leftlist li a{
+    width: 170px;
+    margin: 10px 0px;
+}
+.subject_window_leftlist_li_aimg{
+    width: 170px;
+    height: 160px;
+}
+.subject_window_leftlist_li_img{
+    width: 160px;
+    height: 160px;
+    margin: 0px 5px;
+}
+.subject_window_leftlist_li_price{
+    width: 160px;
+    height: 20px;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: red;
+}
+.subject_window_leftlist_li_describe{
+    width: 160px;
+    height: 40px;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+}
+.subject_window_leftlist_li_evaluate{
+    width: 160px;
+    height: 60px;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+}
+#subject_window_head{
+    width: 1020px;
+    height: 80px;
+    margin-left: 8px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-top-color: darkgrey;
+    border-bottom-width: 1px;
+    border-bottom-color: darkgrey;
+    /*background-color: orchid;*/
+}
+#subject_window_head .divhead{
+    width: 1020px;
+    height: 34px;
+    margin: 3px 0px;
+
+}
+.subject_window_head_divhead_a{
+    height: 30px;
+    margin: 2px 2.5px;
+
+}
+.subject_window_head_divhead_a_span{
+    height: 25px;
+    margin: 2.5px 0px;
+    line-height: 25px;
+    text-align: center;
+}
+.subject_window_head_divhead_a_i{
+    /*height: 25px;*/
+    /*margin: 2.5px 0px;*/
+    /*line-height: 25px;*/
+    /*text-align: center;*/
+    border:10px solid transparent;
+    border-bottom-color:#ff0000;
+    display:block;
+}
+#subject_window_meun{
+    width: 1020px;
+    border-color: white;
+}
+.subject_window_meun_merchandise{
+    width: 220px;
+    height: 440px;
+    padding: 30px 10px 10px 10px;
+    margin: 0px 7.5px;
+    /*background-color: #a6cbe7;*/
+}
+.subject_window_meun_merchandise_a{
+    width: 220px;
+    height: 430px;
+    margin: 5px 0px;
+}
+.subject_window_meun_merchandise_a_imga{
+    width: 220px;
+    height: 220px;
+}
+.subject_window_meun_merchandise_a_img{
+    width: 220px;
+    height: 220px;
+}
+.subject_window_meun_merchandise_a_price{
+    width: 220px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+}
+.subject_window_meun_merchandise_a_describe{
+    width: 220px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.subject_window_meun_merchandise_a_evaluateCount{
+    width: 220px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.subject_window_meun_merchandise_a_brand{
+    width: 220px;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+    color: red;
+    margin-bottom: 5px;
+}
+.subject_window_meun_merchandise_a_shop{
+    width: 220px;
+    height: 15px;
+    font-size: 15px;
+    text-align: left;
+    color: red;
+    margin-bottom: 5px;
+}
+.subject_window_meun_merchandise_a_kind{
+    width: 220px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+.subject_window_meun_merchandise_a_proid{
+    width: 220px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: red;
+    display: none;
+}
+.subject_window_meun_merchandise_a_optate{
+    width: 220px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.subject_window_meun_merchandise_a_optate_button1{
+    width: 96px;
+    height: 26px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    line-height: 26px;
+    text-align: center;
+    color: red;
+}
+.subject_window_meun_merchandise_a_optate_button2{
+    width: 96px;
+    height: 26px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    line-height: 26px;
+    text-align: center;
+    float: right;
+    color: red;
+}
+
+
+
+
+/*-----------------------------------------------------subject--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
