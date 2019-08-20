@@ -102,10 +102,17 @@
                     <h2>剩余库存：</h2>
                     <p id="pro_count">件</p>
                 </div>
-                
+                <div>
+                    <img src="images/detailimg2.png">
+                </div>
+            </div>
+            <div>
+                <img src="images/detailimg.png">
             </div>
             <div id="pro_cart">
-                <a href="#" id="insertCart">加入购物车</a>
+                <a href="cart.html" id="insertCart">
+                    <img src="images/cartimg.png">
+                </a>
             </div>
         </div>
     </div>
@@ -220,17 +227,16 @@
             }
         })
         var cartIn = {
+            user_id:null,
             cart_detail_id:null,
-            cart_id:null,
+            cart_id:1,
             pro_id:null,
             pro_num:1,
         }
-        var pro_id=1;
         $.ajax({
             url:"http://localhost:8080/getPro",
             type:"post",
             dataType:"json",
-            data:{'pro_id':pro_id},
             success:function (data) {
                 console.log(data);
                 $('#pro_desc').text(data.pro_describe);
@@ -245,8 +251,25 @@
             type:"post",
             dataType:"text",
             success:function (data) {
-                cartIn.cart_id=data;
-                cartIn.cart_detail_id=cartIn.cart_id;
+                $.ajax({
+                    url:"http://localhost:8080/insertCar",
+                    type:"post",
+                    dataType:"text",
+                    data:{
+                        'user_id':data,
+                    },
+                    success:function () {
+                        // a.ajax({
+                        //     url:"http://localhost:8080/getCart",
+                        //     type:"post",
+                        //     dataType:"text",
+                        //     data:{'user_id':cartIn.user_id},
+                        //     success:function (data) {
+                        //         cartIn.cart_id=data;
+                        //     }
+                        // })
+                    }
+                })
             }
         })
         $("#insertCart").click(function () {
@@ -254,8 +277,7 @@
                 url:"http://localhost:8080/insertCart",
                 type:"post",
                 dataType:"text",
-                data:{'cart_detail_id':cartIn.cart_detail_id,
-                    'cart_id':cartIn.cart_id,
+                data:{'cart_id':cartIn.cart_id,
                     'pro_id':cartIn.pro_id,
                     'pro_num':cartIn.pro_num,
                 },
