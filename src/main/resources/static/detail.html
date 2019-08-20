@@ -233,10 +233,14 @@
             pro_id:null,
             pro_num:1,
         }
+        var pro_id = 1;
         $.ajax({
             url:"http://localhost:8080/getPro",
             type:"post",
             dataType:"json",
+            data:{
+                'pro_id':pro_id,
+            },
             success:function (data) {
                 console.log(data);
                 $('#pro_desc').text(data.pro_describe);
